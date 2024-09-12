@@ -1,0 +1,16 @@
+default: &default
+  adapter: postgresql
+  encoding: unicode
+  pool: 5
+  username: postgres  # Match the POSTGRES_USER
+  password: password  # Match the POSTGRES_PASSWORD
+  host: db            # Docker Compose service name
+  port: 5432
+
+development:
+  <<: *default
+  database: crypto_alerts_development
+
+test:
+  <<: *default
+  database: alerts_test

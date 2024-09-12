@@ -1,0 +1,8 @@
+Steps Followed:
+rails g model User user_name:string email:string phone_number:string
+rails g model Product code:string name:string category:string
+rails g model User user_name:string email:string phone_number:string
+rails g scaffold_controller User (for views in rails) and added users#index as root of the app.
+Copied the csv files with the input data to /tmp folder.
+Ran script upload_data.rb to populate the db.
+Fetch orders method to retrieve user orders data: Routes and set it up in the views
